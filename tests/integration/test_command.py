@@ -4,6 +4,7 @@ Test the command worker with a mocked drone.
 
 import math
 import multiprocessing as mp
+import queue
 import subprocess
 import threading
 import time
@@ -34,7 +35,7 @@ TURNING_SPEED = 5  # deg/s
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-# Add your own constants here
+# No additional constants needed for command test
 
 # =================================================================================================
 #                            ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -54,31 +55,51 @@ def start_drone() -> None:
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 def stop(
-    args,  # Add any necessary arguments
+    controller: worker_controller.WorkerController,
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
 ) -> None:
     """
     Stop the workers.
     """
-    pass  # Add logic to stop your worker
+    controller.request_exit()
+    input_queue.queue.put(None)   # Unblock command_worker waiting on input
+    output_queue.queue.put(None)  # Signal read_queue thread to exit
 
 
 def read_queue(
-    args,  # Add any necessary arguments
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
     main_logger: logger.Logger,
 ) -> None:
     """
     Read and print the output queue.
     """
-    pass  # Add logic to read from your worker's output queue and print it using the logger
+    while True:
+        try:
+            command_str = output_queue.queue.get(timeout=0.1)
+        except queue.Empty:
+            continue
+
+        if command_str is None:
+            # Sentinel value — stop reading
+            break
+
+        main_logger.info(f"Command issued: {command_str}")
 
 
 def put_queue(
-    args,  # Add any necessary arguments
+    path: "list[telemetry.TelemetryData]",
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
     Place mocked inputs into the input queue periodically with period TELEMETRY_PERIOD.
     """
-    pass  # Add logic to place the mocked inputs into your worker's input queue periodically
+    for telemetry_data in path:
+        if controller.is_exit_requested():
+            break
+        input_queue.queue.put(telemetry_data)
+        time.sleep(TELEMETRY_PERIOD)
 
 
 # =================================================================================================
@@ -125,12 +146,15 @@ def main() -> int:
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Mock starting a worker, since cannot actually start a new process
     # Create a worker controller for your worker
+    controller = worker_controller.WorkerController()
 
     # Create a multiprocess manager for synchronized queues
+    mp_manager = mp.Manager()
 
     # Create your queues
+    input_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 50)
+    output_queue = queue_proxy_wrapper.QueueProxyWrapper(mp_manager, 50)
 
     # Test cases, DO NOT EDIT!
     path = [
@@ -217,16 +241,20 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (args,)).start()
+    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)).start()
 
     # Put items into input queue
-    threading.Thread(target=put_queue, args=(args,)).start()
+    threading.Thread(target=put_queue, args=(path, input_queue, controller)).start()
 
     # Read the main queue (worker outputs)
-    threading.Thread(target=read_queue, args=(args, main_logger)).start()
+    threading.Thread(target=read_queue, args=(output_queue, main_logger)).start()
 
     command_worker.command_worker(
-        # Place your own arguments here
+        connection,
+        TARGET,
+        input_queue,
+        output_queue,
+        controller,
     )
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑

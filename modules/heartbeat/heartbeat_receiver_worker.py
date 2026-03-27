@@ -18,13 +18,15 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def heartbeat_receiver_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process that receives HEARTBEAT messages from the drone and reports connection status.
 
-    args... describe what the arguments are
+    connection: MAVLink connection to the drone.
+    output_queue: Queue to put the connection status string ("Connected"/"Disconnected") into.
+    controller: WorkerController for pause/exit signals from main.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +48,31 @@ def heartbeat_receiver_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (heartbeat_receiver.HeartbeatReceiver)
+    # Instantiate HeartbeatReceiver
+    result, receiver = heartbeat_receiver.HeartbeatReceiver.create(connection, local_logger)
+    if not result:
+        local_logger.error("Failed to create HeartbeatReceiver")
+        return
 
-    # Main loop: do work.
+    # Get Pylance to stop complaining
+    assert receiver is not None
+
+    local_logger.info("HeartbeatReceiver created, starting main loop")
+
+    # Main loop: receive heartbeat and put status to queue until exit is requested
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        result, status = receiver.run()
+        if not result:
+            local_logger.error("HeartbeatReceiver.run() failed")
+            continue
+
+        # Get Pylance to stop complaining
+        assert status is not None
+
+        local_logger.info(f"Connection status: {status}")
+        output_queue.queue.put(status)
 
 
 # =================================================================================================

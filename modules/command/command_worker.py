@@ -19,13 +19,19 @@ from ..common.modules.logger import logger
 def command_worker(
     connection: mavutil.mavfile,
     target: command.Position,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    input_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process that reads TelemetryData from the input queue and sends COMMAND_LONG
+    messages to the drone to keep it aimed at the target.
 
-    args... describe what the arguments are
+    connection: MAVLink connection to the drone.
+    target: The 3D target position the drone should face.
+    input_queue: Queue of TelemetryData objects from the telemetry worker.
+    output_queue: Queue to put command result strings into (for main process to log).
+    controller: WorkerController for pause/exit signals from main.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -47,9 +53,39 @@ def command_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (command.Command)
+    # Instantiate Command
+    result, cmd = command.Command.create(connection, target, local_logger)
+    if not result:
+        local_logger.error("Failed to create Command")
+        return
 
-    # Main loop: do work.
+    # Get Pylance to stop complaining
+    assert cmd is not None
+
+    local_logger.info("Command created, starting main loop")
+
+    # Main loop: get telemetry from queue, run command logic, put result to output queue
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        try:
+            telemetry_data = input_queue.queue.get(timeout=0.1)
+        except Exception:  # pylint: disable=broad-except
+            # Queue empty or timeout, loop back
+            continue
+
+        if telemetry_data is None:
+            # Sentinel value — exit signal from fill_and_drain_queue
+            break
+
+        result, command_str = cmd.run(telemetry_data)
+        if not result:
+            local_logger.error("Command.run() failed")
+            continue
+
+        if command_str is not None:
+            local_logger.info(f"Command issued: {command_str}")
+            output_queue.queue.put(command_str)
 
 
 # =================================================================================================

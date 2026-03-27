@@ -1,0 +1,28 @@
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | main | 143] Connected!
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE ALTITUDE: 1
+17:31:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE ALTITUDE: -1
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 63.43494882292201
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 90.0
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 116.56505117707799
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 45.0
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 63.43494882292201
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 90.0
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 26.565051177077994
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 45.0
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 90.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 45.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 90.0
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: 135.0
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -26.565051177077994
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -45.0
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -90.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -45.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -90.0
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -135.0
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -63.43494882292201
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -90.0
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -116.56505117707799
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -45.00000000000005
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -63.43494882292201
+17:31:39: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_command.py | read_queue | 87] Command issued: CHANGE YAW: -90.0

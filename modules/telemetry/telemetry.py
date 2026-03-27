@@ -65,9 +65,16 @@ class TelemetryData:  # pylint: disable=too-many-instance-attributes
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
+TELEMETRY_TIMEOUT = 1  # seconds
+
+
 class Telemetry:
     """
     Telemetry class to read position and attitude (orientation).
+
+    Waits up to 1 second to receive both LOCAL_POSITION_NED (32) and ATTITUDE (30)
+    messages. Returns a TelemetryData object with the combined data, using the most
+    recent timestamp.
     """
 
     __private_key = object()
@@ -76,37 +83,72 @@ class Telemetry:
     def create(
         cls,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
-    ):
+    ) -> "tuple[True, Telemetry] | tuple[False, None]":
         """
         Falliable create (instantiation) method to create a Telemetry object.
         """
-        pass  # Create a Telemetry object
+        return True, Telemetry(cls.__private_key, connection, local_logger)
 
     def __init__(
         self,
         key: object,
         connection: mavutil.mavfile,
-        args,  # Put your own arguments here
         local_logger: logger.Logger,
     ) -> None:
         assert key is Telemetry.__private_key, "Use create() method"
 
-        # Do any intializiation here
+        # Store connection and logger
+        self.__connection = connection
+        self.__logger = local_logger
 
-    def run(
-        self,
-        args,  # Put your own arguments here
-    ):
+    def run(self) -> "tuple[bool, TelemetryData | None]":
         """
         Receive LOCAL_POSITION_NED and ATTITUDE messages from the drone,
         combining them together to form a single TelemetryData object.
+
+        Returns (True, TelemetryData) if both messages are received within the timeout.
+        Returns (False, None) if a timeout occurs (restart signal).
         """
         # Read MAVLink message LOCAL_POSITION_NED (32)
+        pos_msg = self.__connection.recv_match(
+            type="LOCAL_POSITION_NED", blocking=True, timeout=TELEMETRY_TIMEOUT
+        )
+        if pos_msg is None or pos_msg.get_type() != "LOCAL_POSITION_NED":
+            self.__logger.warning("Timed out waiting for LOCAL_POSITION_NED, restarting")
+            return False, None
+
         # Read MAVLink message ATTITUDE (30)
-        # Return the most recent of both, and use the most recent message's timestamp
-        pass
+        att_msg = self.__connection.recv_match(
+            type="ATTITUDE", blocking=True, timeout=TELEMETRY_TIMEOUT
+        )
+        if att_msg is None or att_msg.get_type() != "ATTITUDE":
+            self.__logger.warning("Timed out waiting for ATTITUDE, restarting")
+            return False, None
+
+        # Use the most recent timestamp from both messages
+        # LOCAL_POSITION_NED uses z-down (NED), but per bootcamp instructions we treat
+        # it as standard right-handed x-y-z where z is up, so we negate the NED z/vz.
+        time_since_boot = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
+
+        telemetry_data = TelemetryData(
+            time_since_boot=time_since_boot,
+            x=pos_msg.x,
+            y=pos_msg.y,
+            z=pos_msg.z,  # Treat as standard x-y-z per bootcamp instructions
+            x_velocity=pos_msg.vx,
+            y_velocity=pos_msg.vy,
+            z_velocity=pos_msg.vz,  # Treat as standard x-y-z per bootcamp instructions
+            roll=att_msg.roll,
+            pitch=att_msg.pitch,
+            yaw=att_msg.yaw,
+            roll_speed=att_msg.rollspeed,
+            pitch_speed=att_msg.pitchspeed,
+            yaw_speed=att_msg.yawspeed,
+        )
+
+        self.__logger.info(f"Telemetry received: {telemetry_data}")
+        return True, telemetry_data
 
 
 # =================================================================================================

@@ -18,13 +18,16 @@ from ..common.modules.logger import logger
 # =================================================================================================
 def telemetry_worker(
     connection: mavutil.mavfile,
-    args,  # Place your own arguments here
-    # Add other necessary worker arguments here
+    output_queue: queue_proxy_wrapper.QueueProxyWrapper,
+    controller: worker_controller.WorkerController,
 ) -> None:
     """
-    Worker process.
+    Worker process that reads ATTITUDE and LOCAL_POSITION_NED messages from the drone
+    and outputs TelemetryData objects.
 
-    args... describe what the arguments are
+    connection: MAVLink connection to the drone.
+    output_queue: Queue to put TelemetryData objects into.
+    controller: WorkerController for pause/exit signals from main.
     """
     # =============================================================================================
     #                          ↑ BOOTCAMPERS MODIFY ABOVE THIS COMMENT ↑
@@ -46,9 +49,31 @@ def telemetry_worker(
     # =============================================================================================
     #                          ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
     # =============================================================================================
-    # Instantiate class object (telemetry.Telemetry)
+    # Instantiate Telemetry
+    result, telem = telemetry.Telemetry.create(connection, local_logger)
+    if not result:
+        local_logger.error("Failed to create Telemetry")
+        return
 
-    # Main loop: do work.
+    # Get Pylance to stop complaining
+    assert telem is not None
+
+    local_logger.info("Telemetry created, starting main loop")
+
+    # Main loop: receive telemetry and put to queue until exit is requested
+    while not controller.is_exit_requested():
+        controller.check_pause()
+
+        result, telemetry_data = telem.run()
+        if not result:
+            # Timeout or failed to receive both messages, restart
+            local_logger.warning("Telemetry run() timed out, restarting")
+            continue
+
+        # Get Pylance to stop complaining
+        assert telemetry_data is not None
+
+        output_queue.queue.put(telemetry_data)
 
 
 # =================================================================================================

@@ -1,0 +1,90 @@
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 51] Logger initialized
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 65] Command created, starting main loop
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 4.0000) m/s
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 133] CHANGE ALTITUDE: 1
+17:31:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE ALTITUDE: 1
+17:31:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 1.0000) m/s
+17:31:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 133] CHANGE ALTITUDE: -1
+17:31:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE ALTITUDE: -1
+17:31:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.6667) m/s
+17:31:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 171] No adjustment needed for this telemetry frame
+17:31:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.5000) m/s
+17:31:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 171] No adjustment needed for this telemetry frame
+17:31:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.4000) m/s
+17:31:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 171] No adjustment needed for this telemetry frame
+17:31:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.3333) m/s
+17:31:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 171] No adjustment needed for this telemetry frame
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.2857) m/s
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 171] No adjustment needed for this telemetry frame
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 2.5000, 0.2500) m/s
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 63.43494882292201
+17:31:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 63.43494882292201
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 4.4444, 0.2222) m/s
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 90.0
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 90.0
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 6.0000, 0.2000) m/s
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 116.56505117707799
+17:31:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 116.56505117707799
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (1.8182, 5.4545, 0.1818) m/s
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 45.0
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 45.0
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (3.3333, 5.0000, 0.1667) m/s
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 63.43494882292201
+17:31:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 63.43494882292201
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (4.6154, 4.6154, 0.1538) m/s
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 90.0
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 90.0
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (4.2857, 2.8571, 0.1429) m/s
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 26.565051177077994
+17:31:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 26.565051177077994
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (4.0000, 1.3333, 0.1333) m/s
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 45.0
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 45.0
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (3.7500, 0.0000, 0.1250) m/s
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 90.0
+17:31:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 90.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (2.3529, 0.0000, 0.1176) m/s
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 45.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 45.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (1.1111, 0.0000, 0.1111) m/s
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 90.0
+17:31:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 90.0
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.1053) m/s
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: 135.0
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: 135.0
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 1.0000, 0.1000) m/s
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -26.565051177077994
+17:31:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -26.565051177077994
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 1.9048, 0.0952) m/s
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -45.0
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -45.0
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 2.7273, 0.0909) m/s
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -90.0
+17:31:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -90.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.8696, 2.6087, 0.0870) m/s
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -45.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -45.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (1.6667, 2.5000, 0.0833) m/s
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -90.0
+17:31:35: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -90.0
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (2.4000, 2.4000, 0.0800) m/s
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -135.0
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -135.0
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (2.3077, 1.5385, 0.0769) m/s
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -63.43494882292201
+17:31:36: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -63.43494882292201
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (2.2222, 0.7407, 0.0741) m/s
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -90.0
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -90.0
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (2.1429, 0.0000, 0.0714) m/s
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -116.56505117707799
+17:31:37: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -116.56505117707799
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (1.3793, 0.0000, 0.0690) m/s
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -45.00000000000005
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -45.00000000000005
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.6667, 0.0000, 0.0667) m/s
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -63.43494882292201
+17:31:38: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -63.43494882292201
+17:31:39: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 109] Average velocity so far: (0.0000, 0.0000, 0.0645) m/s
+17:31:39: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command.py | run | 167] CHANGE YAW: -90.0
+17:31:39: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/command/command_worker.py | command_worker | 87] Command issued: CHANGE YAW: -90.0
