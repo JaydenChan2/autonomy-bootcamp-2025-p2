@@ -64,9 +64,7 @@ class HeartbeatReceiver:
         if msg is None or msg.get_type() != "HEARTBEAT":
             # Missed a heartbeat
             self.__miss_count += 1
-            self.__logger.warning(
-                f"Missed heartbeat! Consecutive misses: {self.__miss_count}"
-            )
+            self.__logger.warning(f"Missed heartbeat! Consecutive misses: {self.__miss_count}")
 
             if self.__miss_count >= DISCONNECT_THRESHOLD:
                 self.__logger.warning("Connection Disconnected (missed 5+ heartbeats)")
@@ -74,11 +72,11 @@ class HeartbeatReceiver:
             # Fewer than threshold misses — still potentially connected
             # Return Connected status until threshold is hit
             return True, "Connected"
-        else:
-            # Received a heartbeat, reset miss counter
-            self.__logger.info("Received heartbeat — Connected")
-            self.__miss_count = 0
-            return True, "Connected"
+
+        # Received a heartbeat, reset miss counter
+        self.__logger.info("Received heartbeat — Connected")
+        self.__miss_count = 0
+        return True, "Connected"
 
 
 # =================================================================================================

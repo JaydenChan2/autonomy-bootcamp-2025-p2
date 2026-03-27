@@ -82,15 +82,16 @@ class Command:  # pylint: disable=too-many-instance-attributes
         (False, None) on error.
         """
         # Validate required telemetry fields
-        if (
-            telemetry_data.x is None
-            or telemetry_data.y is None
-            or telemetry_data.z is None
-            or telemetry_data.yaw is None
-            or telemetry_data.x_velocity is None
-            or telemetry_data.y_velocity is None
-            or telemetry_data.z_velocity is None
-        ):
+        required_fields = [
+            telemetry_data.x,
+            telemetry_data.y,
+            telemetry_data.z,
+            telemetry_data.yaw,
+            telemetry_data.x_velocity,
+            telemetry_data.y_velocity,
+            telemetry_data.z_velocity,
+        ]
+        if any(field is None for field in required_fields):
             self.__logger.error("Received telemetry data with missing fields")
             return False, None
 
@@ -117,16 +118,16 @@ class Command:  # pylint: disable=too-many-instance-attributes
         delta_z = self.__target.z - telemetry_data.z
         if abs(delta_z) > HEIGHT_TOLERANCE:
             self.__connection.mav.command_long_send(
-                1,                # target_system
-                0,                # target_component
+                1,  # target_system
+                0,  # target_component
                 mavutil.mavlink.MAV_CMD_CONDITION_CHANGE_ALT,
-                0,                # confirmation
-                Z_SPEED,          # param1: ascent/descent speed (m/s)
-                0,                # param2: unused
-                0,                # param3: unused
-                0,                # param4: unused
-                0,                # param5: unused
-                0,                # param6: unused
+                0,  # confirmation
+                Z_SPEED,  # param1: ascent/descent speed (m/s)
+                0,  # param2: unused
+                0,  # param3: unused
+                0,  # param4: unused
+                0,  # param5: unused
+                0,  # param6: unused
                 self.__target.z,  # param7: target altitude (metres)
             )
             command_str = f"CHANGE ALTITUDE: {delta_z}"
@@ -151,17 +152,17 @@ class Command:  # pylint: disable=too-many-instance-attributes
             direction = -1 if yaw_diff_deg > 0 else 1
 
             self.__connection.mav.command_long_send(
-                1,                    # target_system
-                0,                    # target_component
+                1,  # target_system
+                0,  # target_component
                 mavutil.mavlink.MAV_CMD_CONDITION_YAW,
-                0,                    # confirmation
-                abs(yaw_diff_deg),    # param1: angle magnitude (degrees)
-                TURNING_SPEED,        # param2: angular speed (deg/s)
-                direction,            # param3: -1=CCW, 1=CW
-                1,                    # param4: 1=relative angle
-                0,                    # param5: unused
-                0,                    # param6: unused
-                0,                    # param7: unused
+                0,  # confirmation
+                abs(yaw_diff_deg),  # param1: angle magnitude (degrees)
+                TURNING_SPEED,  # param2: angular speed (deg/s)
+                direction,  # param3: -1=CCW, 1=CW
+                1,  # param4: 1=relative angle
+                0,  # param5: unused
+                0,  # param6: unused
+                0,  # param7: unused
             )
             command_str = f"CHANGE YAW: {yaw_diff_deg}"
             self.__logger.info(command_str)

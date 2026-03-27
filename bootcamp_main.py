@@ -30,9 +30,9 @@ CONNECTION_STRING = "tcp:localhost:12345"
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
 # Set queue max sizes (<= 0 for infinity)
-HEARTBEAT_STATUS_QUEUE_MAX_SIZE = 5    # heartbeat receiver -> main
+HEARTBEAT_STATUS_QUEUE_MAX_SIZE = 5  # heartbeat receiver -> main
 TELEMETRY_TO_COMMAND_QUEUE_MAX_SIZE = 5  # telemetry -> command
-COMMAND_OUTPUT_QUEUE_MAX_SIZE = 5      # command -> main
+COMMAND_OUTPUT_QUEUE_MAX_SIZE = 5  # command -> main
 
 # Set worker counts
 HEARTBEAT_SENDER_WORKER_COUNT = 1

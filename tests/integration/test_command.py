@@ -63,7 +63,7 @@ def stop(
     Stop the workers.
     """
     controller.request_exit()
-    input_queue.queue.put(None)   # Unblock command_worker waiting on input
+    input_queue.queue.put(None)  # Unblock command_worker waiting on input
     output_queue.queue.put(None)  # Signal read_queue thread to exit
 
 
@@ -241,7 +241,9 @@ def main() -> int:
     ]
 
     # Just set a timer to stop the worker after a while, since the worker infinite loops
-    threading.Timer(TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)).start()
+    threading.Timer(
+        TELEMETRY_PERIOD * len(path), stop, (controller, input_queue, output_queue)
+    ).start()
 
     # Put items into input queue
     threading.Thread(target=put_queue, args=(path, input_queue, controller)).start()

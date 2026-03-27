@@ -4,7 +4,6 @@ Heartbeat worker that sends heartbeats periodically.
 
 import os
 import pathlib
-import time
 
 from pymavlink import mavutil
 

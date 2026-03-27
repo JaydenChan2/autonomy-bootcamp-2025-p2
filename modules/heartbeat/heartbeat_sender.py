@@ -8,7 +8,7 @@ from pymavlink import mavutil
 # =================================================================================================
 #                            ↓ BOOTCAMPERS MODIFY BELOW THIS COMMENT ↓
 # =================================================================================================
-import time
+import time  # pylint: disable=wrong-import-order
 
 
 class HeartbeatSender:
