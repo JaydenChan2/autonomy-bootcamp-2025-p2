@@ -63,8 +63,8 @@ def stop(
     Stop the workers.
     """
     controller.request_exit()
-    input_queue.queue.put(None)  # Unblock command_worker waiting on input
-    output_queue.queue.put(None)  # Signal read_queue thread to exit
+    input_queue.fill_and_drain_queue()
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
@@ -78,10 +78,9 @@ def read_queue(
         try:
             command_str = output_queue.queue.get(timeout=0.1)
         except queue.Empty:
-            continue
+            break
 
         if command_str is None:
-            # Sentinel value — stop reading
             break
 
         main_logger.info(f"Command issued: {command_str}")

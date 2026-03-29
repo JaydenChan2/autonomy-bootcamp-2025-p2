@@ -55,7 +55,7 @@ def stop(
     Stop the workers.
     """
     controller.request_exit()
-    output_queue.queue.put(None)  # Signal read_queue thread to exit
+    output_queue.fill_and_drain_queue()
 
 
 def read_queue(
@@ -69,10 +69,9 @@ def read_queue(
         try:
             telemetry_data = output_queue.queue.get(timeout=0.1)
         except queue.Empty:
-            continue
+            break
 
         if telemetry_data is None:
-            # Sentinel value — stop reading
             break
 
         main_logger.info(f"Telemetry received: {telemetry_data}")

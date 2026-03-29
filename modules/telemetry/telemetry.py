@@ -124,10 +124,8 @@ class Telemetry:
             self.__logger.warning("Timed out waiting for ATTITUDE, restarting")
             return False, None
 
-        # Use the most recent timestamp from both messages
-        # LOCAL_POSITION_NED uses z-down (NED), but per bootcamp instructions we treat
-        # it as standard right-handed x-y-z where z is up, so we negate the NED z/vz.
-        time_since_boot = max(pos_msg.time_boot_ms, att_msg.time_boot_ms)
+        # Use the position message timestamp as time_since_boot
+        time_since_boot = pos_msg.time_boot_ms
 
         telemetry_data = TelemetryData(
             time_since_boot=time_since_boot,

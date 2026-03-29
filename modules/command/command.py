@@ -131,7 +131,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 self.__target.z,  # param7: target altitude (metres)
             )
             command_str = f"CHANGE ALTITUDE: {delta_z}"
-            self.__logger.info(command_str)
             return True, command_str
 
         # Adjust direction (yaw) using MAV_CMD_CONDITION_YAW (115) — relative angle
@@ -165,7 +164,6 @@ class Command:  # pylint: disable=too-many-instance-attributes
                 0,  # param7: unused
             )
             command_str = f"CHANGE YAW: {yaw_diff_deg}"
-            self.__logger.info(command_str)
             return True, command_str
 
         # No adjustment needed
