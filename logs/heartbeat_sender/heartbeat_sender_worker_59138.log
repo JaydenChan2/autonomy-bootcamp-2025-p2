@@ -1,0 +1,13 @@
+12:28:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 43] Logger initialized
+12:28:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 57] HeartbeatSender created, starting main loop
+12:28:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat
+12:28:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_sender_worker.py | heartbeat_sender_worker | 63] Sent heartbeat

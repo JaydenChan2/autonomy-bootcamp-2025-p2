@@ -1,0 +1,27 @@
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 46] Logger initialized
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 60] HeartbeatReceiver created, starting main loop
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 77] Received heartbeat — Connected
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:20: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 77] Received heartbeat — Connected
+12:32:20: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:21: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 1
+12:32:21: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:21: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 77] Received heartbeat — Connected
+12:32:21: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:22: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 1
+12:32:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 77] Received heartbeat — Connected
+12:32:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 77] Received heartbeat — Connected
+12:32:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:24: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 1
+12:32:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:25: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 2
+12:32:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:26: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 3
+12:32:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:27: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 4
+12:32:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Connected
+12:32:28: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 67] Missed heartbeat! Consecutive misses: 5
+12:32:28: [WARNING] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver.py | run | 70] Connection Disconnected (missed 5+ heartbeats)
+12:32:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/heartbeat/heartbeat_receiver_worker.py | heartbeat_receiver_worker | 74] Connection status: Disconnected

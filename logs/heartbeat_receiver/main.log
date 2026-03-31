@@ -1,28 +1,3 @@
-17:30:14: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
-17:30:14: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 121] Connected!
-17:30:14: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:15: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:16: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:16: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:17: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:18: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:18: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:20: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:21: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:22: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:23: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Disconnected
-17:30:24: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Disconnected
-17:30:25: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Disconnected
-17:30:26: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Disconnected
-17:30:27: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:28: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:29: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:30: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:31: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:32: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:33: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
-17:30:34: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 80] Worker output: Connected
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/modules/common/modules/logger/logger_main_setup.py | setup_main_logger | 62] main logger initialized
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | main | 120] Connected!
+12:32:19: [INFO] [/Users/jaydenchan/autonomy-bootcamp-2025-p2/tests/integration/test_heartbeat_receiver.py | read_queue | 79] Worker output: Connected
