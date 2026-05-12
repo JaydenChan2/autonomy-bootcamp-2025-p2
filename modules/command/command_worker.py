@@ -84,7 +84,6 @@ def command_worker(
             continue
 
         if command_str is not None:
-            local_logger.info(f"Command issued: {command_str}")
             output_queue.queue.put(command_str)
 
 
